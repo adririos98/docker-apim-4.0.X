@@ -18,10 +18,15 @@
 
 # set base Docker image to AdoptOpenJDK CentOS Docker image
 FROM adoptopenjdk/openjdk11:x86_64-centos-jdk-11.0.10_9
-LABEL maintainer="WSO2 Docker Maintainers <dev@wso2.org>" \
+LABEL maintainer="WSO2 Docker Maintainers Adrián Hernández Ríos y Rogelio García Jiménez" \
       com.wso2.docker.source="https://github.com/wso2/docker-apim/releases/tag/v4.0.0.1"
 # set Docker image build arguments
 # build arguments for user/group configurations
+# build arguments for external artifacts
+ARG MYSQL_CONNECTOR_VERSION=8.0.17
+
+# add MySQL JDBC connector to server home as a third party library
+
 ARG USER=wso2carbon
 ARG USER_ID=802
 ARG USER_GROUP=wso2
@@ -73,7 +78,7 @@ RUN \
 # set the user and work directory
 USER ${USER_ID}
 WORKDIR ${USER_HOME}
-
+ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/mysql/mysql-connector-java/${MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${MYSQL_CONNECTOR_VERSION}.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
 # set environment variables
 ENV WORKING_DIRECTORY=${USER_HOME} \
     WSO2_SERVER_HOME=${WSO2_SERVER_HOME}
