@@ -36,7 +36,8 @@ services:
       start_period: 80s
   api-manager:
     # build: ./dockerfiles/apim
-    image: wso2am:4.0.0
+    # image: wso2am:4.0.0
+    build: ../../dockerfiles/centos/apim
     healthcheck:
       test: ["CMD", "nc", "-z","localhost", "9443"]
       interval: 10s
