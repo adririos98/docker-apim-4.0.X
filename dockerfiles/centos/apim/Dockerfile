@@ -26,7 +26,7 @@ LABEL maintainer="WSO2 Docker Maintainers Adrián Hernández Ríos y Rogelio Gar
 ARG MYSQL_CONNECTOR_VERSION=8.0.17
 
 # add MySQL JDBC connector to server home as a third party library
-ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/mysql/mysql-connector-java/${MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${MYSQL_CONNECTOR_VERSION}.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
+
 ARG USER=wso2carbon
 ARG USER_ID=802
 ARG USER_GROUP=wso2
@@ -78,7 +78,7 @@ RUN \
 # set the user and work directory
 USER ${USER_ID}
 WORKDIR ${USER_HOME}
-
+ADD --chown=wso2carbon:wso2 https://repo1.maven.org/maven2/mysql/mysql-connector-java/${MYSQL_CONNECTOR_VERSION}/mysql-connector-java-${MYSQL_CONNECTOR_VERSION}.jar ${WSO2_SERVER_HOME}/repository/components/dropins/
 # set environment variables
 ENV WORKING_DIRECTORY=${USER_HOME} \
     WSO2_SERVER_HOME=${WSO2_SERVER_HOME}
