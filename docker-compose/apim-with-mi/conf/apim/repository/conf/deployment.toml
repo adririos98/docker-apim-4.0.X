@@ -185,16 +185,16 @@ allow_credentials = false
 #traffic_manager_auth_urls = ["ssl://localhost:9711","ssl://localhost:9711"]
 #type = "failover"
 
-#[apim.workflow]
-#enable = false
-#service_url = "https://localhost:9445/bpmn"
-#username = "$ref{super_admin.username}"
-#password = "$ref{super_admin.password}"
-#callback_endpoint = "https://localhost:${mgt.transport.https.port}/api/am/admin/v0.17/workflows/update-workflow-status"
-#token_endpoint = "https://localhost:${https.nio.port}/token"
-#client_registration_endpoint = "https://localhost:${mgt.transport.https.port}/client-registration/v0.17/register"
-#client_registration_username = "$ref{super_admin.username}"
-#client_registration_password = "$ref{super_admin.password}"
+[apim.workflow]
+enable = false
+service_url = "https://apim-4:9445/bpmn"
+username = "$ref{super_admin.username}"
+password = "$ref{super_admin.password}"
+callback_endpoint = "https://apim-4:${mgt.transport.https.port}/api/am/admin/v0.17/workflows/update-workflow-status"
+token_endpoint = "https://apim-4:${https.nio.port}/token"
+client_registration_endpoint = "https://apim-4:${mgt.transport.https.port}/client-registration/v0.17/register"
+client_registration_username = "$ref{super_admin.username}"
+client_registration_password = "$ref{super_admin.password}"
 
 #data bridge config
 #[transport.receiver]
