@@ -7,7 +7,7 @@ server_role = "default"
 
 [super_admin]
 username = "admin"
-password = "admin"
+password = "Sevilla20"
 create_admin_account = true
 
 [user_store]
