@@ -14,10 +14,10 @@ create_admin_account = true
 type = "database_unique_id"
 
 [database.apim_db]
-#type = "h2"
-type = "mysql"
-#url = "jdbc:h2:./repository/database/WSO2AM_DB;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE"
-url = "jdbc:mysql://192.168.1.4:3306/apim_db?autoReconnect=true&amp;useSSL=false"
+type = "h2"
+#type = "mysql"
+url = "jdbc:h2:./repository/database/WSO2AM_DB;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE"
+#url = "jdbc:mysql://192.168.1.4:3306/apim_db?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 
