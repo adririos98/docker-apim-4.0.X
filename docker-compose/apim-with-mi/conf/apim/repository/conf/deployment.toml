@@ -12,18 +12,30 @@ create_admin_account = true
 
 [user_store]
 type = "database_unique_id"
-
+s
 [database.apim_db]
-type = "h2"
-url = "jdbc:h2:./repository/database/WSO2AM_DB;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE"
+#type = "h2"
+type = "mysql"
+#url = "jdbc:h2:./repository/database/WSO2AM_DB;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE"
+url = "jdbc:mysql://192.168.1.4:3306/apim_db?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 
+#[database.shared_db]
+#type = "h2"
+#url = "jdbc:h2:./repository/database/WSO2SHARED_DB;DB_CLOSE_ON_EXIT=FALSE"
+#username = "wso2carbon"
+#password = "wso2carbon"
+
+# CUCUYOYE
 [database.shared_db]
-type = "h2"
-url = "jdbc:h2:./repository/database/WSO2SHARED_DB;DB_CLOSE_ON_EXIT=FALSE"
+url = "jdbc:mysql://192.168.1.4:3306/WSO2IS_SHARED_DB?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
+driver = "com.mysql.cj.jdbc.Driver"
+[database.shared_db.pool_options]
+validationQuery="SELECT 1"
+
 
 [keystore.tls]
 file_name =  "wso2carbon.jks"
@@ -107,6 +119,10 @@ auth_token = ""
 #key_validation_handler_type = "default"
 #key_validation_handler_type = "custom"
 #key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
+
+[apim.key_manager]
+service_url = "https://192.168.1.4:9444/services/"
+type = "WSO2-IS"
 
 #[apim.idp]
 #server_url = "https://localhost:${mgt.transport.https.port}"
@@ -249,6 +265,3 @@ notification_endpoint = "https://apim-4:${mgt.transport.https.port}/internal/dat
 username = "${admin.username}"
 password = "${admin.password}"
 
-[apim.key_manager]
-service_url = "https://192.168.1.4:9444/services/"
-type = "WSO2-IS"

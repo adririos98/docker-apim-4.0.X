@@ -1,6 +1,7 @@
 [server]
-hostname = "apim"
+hostname = "wso2is"
 node_ip = "127.0.0.1"
+offset = 1
 base_path = "https://$ref{server.hostname}:${carbon.management.port}"
 
 [super_admin]
@@ -16,7 +17,7 @@ connection_password = "Sevilla20"
 base_dn = "dc=wso2,dc=org"      #refers the base dn on which the user and group search bases will be generated
 
 [database.identity_db]
-url = "jdbc:mysql://mysql_is:3306/WSO2IS_IDENTITY_DB?autoReconnect=true&amp;useSSL=false"
+url = "jdbc:mysql://mysql:3306/WSO2IS_IDENTITY_DB?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 driver = "com.mysql.cj.jdbc.Driver"
@@ -24,7 +25,7 @@ driver = "com.mysql.cj.jdbc.Driver"
 validationQuery="SELECT 1"
 
 [database.shared_db]
-url = "jdbc:mysql://mysql_is:3306/WSO2IS_SHARED_DB?autoReconnect=true&amp;useSSL=false"
+url = "jdbc:mysql://mysql:3306/WSO2IS_SHARED_DB?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 driver = "com.mysql.cj.jdbc.Driver"

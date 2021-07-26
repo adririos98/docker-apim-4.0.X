@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  mysql_is:
+  mysql:
     image: mysql:5.7.29
     ports:
       - 3306
@@ -19,8 +19,8 @@ services:
   identity-server:
     build: ./dockerfiles/is
     ports:
-      - "9763:9763"
-      - "9444:9443"
+      - "9764:9764"
+      - "9444:9444"
     healthcheck:
       test: ["CMD", "curl", "-k", "-f", "https://localhost:9443/carbon/admin/login.jsp"]
       interval: 5s
@@ -28,7 +28,5 @@ services:
       start_period: 100s
     volumes:
       - ./conf/identity-server:/home/wso2carbon/wso2-config-volume
-    depends_on:
-      mysql_is:
-        condition: service_healthy
+
 
