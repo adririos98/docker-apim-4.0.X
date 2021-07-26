@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  mysql:
+  mysql_is:
     image: mysql:5.7.29
     ports:
       - 3306
@@ -29,6 +29,6 @@ services:
     volumes:
       - ./identity-server:/home/wso2carbon/wso2-config-volume
     depends_on:
-      mysql:
+      mysql_is:
         condition: service_healthy
 
