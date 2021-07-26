@@ -1,5 +1,5 @@
 [server]
-hostname = "20.101.115.137"
+hostname = "apim"
 node_ip = "127.0.0.1"
 base_path = "https://$ref{server.hostname}:${carbon.management.port}"
 
@@ -10,7 +10,7 @@ create_admin_account = true
 
 [user_store]
 type = "read_write_ldap_unique_id"
-connection_url = "ldap://20.101.115.137:${Ports.EmbeddedLDAP.LDAPServerPort}"
+connection_url = "ldap://192.168.1.4:${Ports.EmbeddedLDAP.LDAPServerPort}"
 connection_name = "uid=admin,ou=system"
 connection_password = "Sevilla20"
 base_dn = "dc=wso2,dc=org"      #refers the base dn on which the user and group search bases will be generated
@@ -43,7 +43,7 @@ name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 
 [event_listener.properties]
-notification_endpoint = "https://20.101.115.137:9443/internal/data/v1/notify"
+notification_endpoint = "https://192.168.1.4:9443/internal/data/v1/notify"
 username = "admin"
 password = "Sevilla20"
 'header.X-WSO2-KEY-MANAGER' = "WSO2-IS"
