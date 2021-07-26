@@ -42,7 +42,7 @@ services:
       interval: 10s
       start_period: 180s
       retries: 20
-    depends_on:
+    # depends_on:
       # mysql:
       #   condition: service_healthy
     volumes:
