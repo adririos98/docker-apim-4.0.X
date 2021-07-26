@@ -27,6 +27,9 @@ services:
       interval: 5s
       timeout: 120s
       start_period: 100s
+    depends_on:
+      mysql:
+        condition: service_healthy
     volumes:
       - ./conf/identity-server:/home/wso2carbon/wso2-config-volume
 
