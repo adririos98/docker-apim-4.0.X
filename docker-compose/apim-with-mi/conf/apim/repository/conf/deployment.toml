@@ -248,3 +248,7 @@ order = 1
 notification_endpoint = "https://apim-4:${mgt.transport.https.port}/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
+
+[apim.key_manager]
+service_url = "https://wso2is:9444/services/"
+type = "WSO2-IS"
