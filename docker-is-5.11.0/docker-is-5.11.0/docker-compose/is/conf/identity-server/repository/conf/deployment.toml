@@ -43,12 +43,6 @@ type = "org.wso2.carbon.identity.core.handler.AbstractIdentityHandler"
 name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 
-[event_listener.properties]
-notification_endpoint = "https://192.168.1.4:9443/internal/data/v1/notify"
-username = "admin"
-password = "Sevilla20"
-'header.X-WSO2-KEY-MANAGER' = "WSO2-IS"
-
 [[resource.access_control]]
 context = "(.)/keymanager-operations/user-info/claims(.)"
 secure = true
@@ -100,3 +94,9 @@ scopes = "internal_application_mgt_update"
 
 [tenant_context.rewrite]
 custom_webapps = ["/keymanager-operations/"]
+
+[event_listener.properties]
+notification_endpoint = "https://192.168.1.4:9443/internal/data/v1/notify"
+username = "admin"
+password = "Sevilla20"
+'header.X-WSO2-KEY-MANAGER' = "WSO2-IS"
