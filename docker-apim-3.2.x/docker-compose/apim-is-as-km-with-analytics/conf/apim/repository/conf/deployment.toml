@@ -112,7 +112,7 @@ analytics_auth_url =["ssl://am-analytics-worker:7712"]
 #type = "failover"
 
 [apim.key_manager]
-service_url = "https://apim:${mgt.transport.https.port}/services/"
+service_url = "https://apim:9444/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"

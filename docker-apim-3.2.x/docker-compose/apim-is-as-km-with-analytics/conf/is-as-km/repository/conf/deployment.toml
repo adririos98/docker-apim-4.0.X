@@ -42,7 +42,7 @@ order = 1
 notification_endpoint = "https://localhost:9443/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
-'header.X-WSO2-KEY-MANAGER' = "WSO2-IS"
+'header.X-WSO2-KEY-MANAGER' = "WSO2IS"
 
 [[resource.access_control]]
 context = "(.)/keymanager-operations/user-info/claims(.)"
