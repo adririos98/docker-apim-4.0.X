@@ -102,7 +102,7 @@ auth_token = ""
 
 [apim.key_manager]
 # service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
-service_url = "https://is-as-km:9443/services/"
+service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9444/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
@@ -112,11 +112,11 @@ type = "WSO2-IS"
 #key_validation_handler_type = "custom"
 #key_validation_handler_impl = "org.wso2.carbon.apimgt.keymgt.handlers.DefaultKeyValidationHandler"
 
-[apim.idp]
-server_url = "https://is-as-km:${mgt.transport.https.port}"
-authorize_endpoint = "https://is-as-km:${mgt.transport.https.port}/oauth2/authorize"
-oidc_logout_endpoint = "https://is-as-km:${mgt.transport.https.port}/oidc/logout"
-oidc_check_session_endpoint = "https://is-as-km:${mgt.transport.https.port}/oidc/checksession"
+#[apim.idp]
+#server_url = "https://localhost:${mgt.transport.https.port}"
+#authorize_endpoint = "https://localhost:${mgt.transport.https.port}/oauth2/authorize"
+#oidc_logout_endpoint = "https://localhost:${mgt.transport.https.port}/oidc/logout"
+#oidc_check_session_endpoint = "https://localhost:${mgt.transport.https.port}/oidc/checksession"
 
 #[apim.jwt]
 #enable = true
