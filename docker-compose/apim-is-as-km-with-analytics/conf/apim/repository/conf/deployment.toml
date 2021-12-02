@@ -57,12 +57,12 @@ show_as_token_endpoint_url = true
 service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/services/"
 username= "${admin.username}"
 password= "${admin.password}"
-ws_endpoint = "ws://apim4sgad.westeurope.cloudapp.azure.com:9099"
-wss_endpoint = "wss://apim4sgad.westeurope.cloudapp.azure.com:8099"
+ws_endpoint = "ws://localhost:9099"
+wss_endpoint = "wss://localhost:8099"
 http_endpoint = "http://apim4sgad.westeurope.cloudapp.azure.com:${http.nio.port}"
 https_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${https.nio.port}"
-websub_event_receiver_http_endpoint = "http://apim4sgad.westeurope.cloudapp.azure.com:9021"
-websub_event_receiver_https_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:8021"
+websub_event_receiver_http_endpoint = "http://localhost:9021"
+websub_event_receiver_https_endpoint = "https://localhost:8021"
 
 [apim.sync_runtime_artifacts.gateway]
 gateway_labels =["Default"]
@@ -248,7 +248,7 @@ type = "org.wso2.carbon.identity.core.handler.AbstractIdentityHandler"
 name = "org.wso2.is.notification.ApimOauthEventInterceptor"
 order = 1
 [event_listener.properties]
-notification_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/internal/data/v1/notify"
+notification_endpoint = "https://localhost:${mgt.transport.https.port}/internal/data/v1/notify"
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
