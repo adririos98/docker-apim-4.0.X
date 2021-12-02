@@ -99,7 +99,8 @@ config_endpoint = "https://localhost:8080/auth/v1"
 auth_token = ""
 
 [apim.key_manager]
-service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
+# service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
+service_url = "https://sgadapim01:9444/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
