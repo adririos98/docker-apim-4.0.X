@@ -1,5 +1,5 @@
 [server]
-hostname = "apim4sgad.westeurope.cloudapp.azure.com"
+hostname = "localhost"
 #offset=0
 base_path = "${carbon.protocol}://${carbon.host}:${carbon.management.port}"
 #discard_empty_caches = false
@@ -54,13 +54,13 @@ type = "hybrid"
 display_in_api_console = true
 description = "This is a hybrid gateway that handles both production and sandbox token traffic."
 show_as_token_endpoint_url = true
-service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/services/"
+service_url = "https://localhost:${mgt.transport.https.port}/services/"
 username= "${admin.username}"
 password= "${admin.password}"
 ws_endpoint = "ws://localhost:9099"
 wss_endpoint = "wss://localhost:8099"
-http_endpoint = "http://apim4sgad.westeurope.cloudapp.azure.com:${http.nio.port}"
-https_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${https.nio.port}"
+http_endpoint = "http://localhost:${http.nio.port}"
+https_endpoint = "https://localhost:${https.nio.port}"
 websub_event_receiver_http_endpoint = "http://localhost:9021"
 websub_event_receiver_https_endpoint = "https://localhost:8021"
 
@@ -96,13 +96,12 @@ gateway_labels =["Default"]
 #expiry_time = "2m"
 
 [apim.analytics]
-enable = false
+enable = true
 config_endpoint = "https://analytics-event-auth.choreo.dev/auth/v1"
 auth_token = "<on-prem-key>"
 
 [apim.key_manager]
-# service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
-service_url = "https://is-as-km:9444/services/"
+service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
@@ -136,9 +135,9 @@ type = "WSO2-IS"
 #enable_token_encryption = false
 #enable_token_hashing = false
 
-[apim.devportal]
-url = "https://localhost:${mgt.transport.https.port}/devportal"
-enable_application_sharing = false
+#[apim.devportal]
+#url = "https://localhost:${mgt.transport.https.port}/devportal"
+#enable_application_sharing = false
 #if application_sharing_type, application_sharing_impl both defined priority goes to application_sharing_impl
 #application_sharing_type = "default" #changed type, saml, default #todo: check the new config for rest api
 #application_sharing_impl = "org.wso2.carbon.apimgt.impl.SAMLGroupIDExtractorImpl"

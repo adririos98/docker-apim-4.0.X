@@ -1,5 +1,5 @@
 [server]
-hostname = "apim-4"
+hostname = "localhost"
 #offset=0
 base_path = "${carbon.protocol}://${carbon.host}:${carbon.management.port}"
 #discard_empty_caches = false
@@ -96,13 +96,12 @@ gateway_labels =["Default"]
 #expiry_time = "2m"
 
 [apim.analytics]
-enable = true
-config_endpoint = "https://analytics-event-auth.choreo.dev/auth/v1"
-auth_token = "<on-prem-key>"
+enable = false
+config_endpoint = "https://localhost:8080/auth/v1"
+auth_token = ""
 
-[apim.key_manager]
-service_url = "https://192.168.1.4:${mgt.transport.https.port}/services/"
-type = "WSO2-IS"
+#[apim.key_manager]
+#service_url = "https://localhost:${mgt.transport.https.port}/services/"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
 #pool.init_idle_capacity = 50
@@ -252,9 +251,3 @@ notification_endpoint = "https://localhost:${mgt.transport.https.port}/internal/
 username = "${admin.username}"
 password = "${admin.password}"
 'header.X-WSO2-KEY-MANAGER' = "default"
-
-[config_data]
-path = "/_system/apim/config"
-
-[transport.passthru_https.sender.parameters]
-HostnameVerifier="AllowAll"

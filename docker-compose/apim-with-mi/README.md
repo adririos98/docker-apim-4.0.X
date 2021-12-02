@@ -19,7 +19,7 @@
 2. Clone WSO2 API Management Docker and Docker Compose resource Git repository.
 
    ```
-   git clone https://github.com/adririos98/docker-apim-4.0.X.git
+   git clone https://github.com/wso2/docker-apim
    ```
    
    > If you are to try out an already released zip of this repo, please ignore this 2nd step. 
@@ -27,7 +27,7 @@
 3. Switch to `docker-compose/apim-with-mi` folder.
 
    ```
-   cd docker-apim-4.0.X/docker-compose/apim-with-mi
+   cd docker-apim/docker-compose/apim-with-mi
    ```
    > If you intend to try out an already released zip of this repository, extract the zip file and directly browse to
    `docker-apim-<released-version-here>/docker-compose/apim-with-mi` folder. 

@@ -19,7 +19,7 @@
 2. Clone WSO2 API Management Docker and Docker Compose resource Git repository.
 
    ```
-   git clone https://github.com/adririos98/docker-apim-4.0.X.git
+   git clone https://github.com/wso2/docker-apim
    ```
    
    > If you are to try out an already released zip of this repo, please ignore this 2nd step. 
@@ -27,7 +27,7 @@
 3. Switch to `docker-compose/apim-is-as-km-with-analytics` folder.
 
    ```
-   cd docker-apim-4.0.X/docker-compose/apim-is-as-km-with-analytics
+   cd docker-apim/docker-compose/apim-is-as-km-with-analytics
    ```
    > If you intend to try out an already released zip of this repository, extract the zip file and directly browse to
    `docker-apim-<released-version-here>/docker-compose/apim-is-as-km-with-analytics` folder. 
@@ -37,7 +37,7 @@
 
 4. [Optional] Replace the existing IS extensions with the latest.
 
-   For this, refer to steps `3`, `4` and `5` of the [`Configure WSO2 IS` section](https://apim.docs.wso2.com/en/next/administer/key-managers/configure-wso2is-connector/#step-1-configure-wso2-is).
+   For this, refer to steps `3`, `4` and `5` of the [Configure WSO2 IS section](https://apim.docs.wso2.com/en/latest/administer/key-managers/configure-wso2is-connector/#step-1-configure-wso2-is).
    
    You may replace the JARs in `docker-compose/apim-is-as-km-with-analytics/dockerfiles/is-as-km/dropins` as defined in step 4.
    
