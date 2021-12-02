@@ -19,12 +19,14 @@ url = "jdbc:mysql://mysql:3306/WSO2AM_DB?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 driver = "com.mysql.cj.jdbc.Driver"
+
 [database.shared_db]
 type = "mysql"
 url = "jdbc:mysql://mysql:3306/WSO2AM_SHARED_DB?autoReconnect=true&amp;useSSL=false"
 username = "wso2carbon"
 password = "wso2carbon"
 driver = "com.mysql.cj.jdbc.Driver"
+
 [keystore.tls]
 file_name =  "wso2carbon.jks"
 type =  "JKS"
@@ -100,7 +102,7 @@ auth_token = ""
 
 [apim.key_manager]
 # service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
-service_url = "https://sgadapim01:9444/services/"
+service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9444/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
