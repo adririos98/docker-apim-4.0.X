@@ -1,5 +1,5 @@
 [server]
-hostname = "localhost"
+hostname = "apim4sgad.westeurope.cloudapp.azure.com"
 #offset=0
 base_path = "${carbon.protocol}://${carbon.host}:${carbon.management.port}"
 #discard_empty_caches = false
@@ -54,13 +54,13 @@ type = "hybrid"
 display_in_api_console = true
 description = "This is a hybrid gateway that handles both production and sandbox token traffic."
 show_as_token_endpoint_url = true
-service_url = "https://localhost:${mgt.transport.https.port}/services/"
+service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/services/"
 username= "${admin.username}"
 password= "${admin.password}"
 ws_endpoint = "ws://localhost:9099"
 wss_endpoint = "wss://localhost:8099"
-http_endpoint = "http://localhost:${http.nio.port}"
-https_endpoint = "https://localhost:${https.nio.port}"
+http_endpoint = "http://apim4sgad.westeurope.cloudapp.azure.com:${http.nio.port}"
+https_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${https.nio.port}"
 websub_event_receiver_http_endpoint = "http://localhost:9021"
 websub_event_receiver_https_endpoint = "https://localhost:8021"
 
@@ -258,3 +258,6 @@ path = "/_system/apim/config"
 
 [transport.passthru_https.sender.parameters]
 HostnameVerifier="AllowAll"
+
+[transport.https.properties]
+proxyPort = 443

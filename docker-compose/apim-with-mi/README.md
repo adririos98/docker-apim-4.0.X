@@ -64,3 +64,4 @@
    https://localhost:8243
    https://localhost:8280
    ```
+apim4sgad.westeurope.cloudapp.azure.com
