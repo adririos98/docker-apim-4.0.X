@@ -102,7 +102,7 @@ auth_token = ""
 
 [apim.key_manager]
 # service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
-service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9444/services/"
+service_url = "https://is-as-km:9444/services"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
@@ -136,8 +136,8 @@ type = "WSO2-IS"
 #enable_token_encryption = false
 #enable_token_hashing = false
 
-[apim.devportal]
-url = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/devportal"
+#[apim.devportal]
+#url = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/devportal"
 #enable_application_sharing = false
 #if application_sharing_type, application_sharing_impl both defined priority goes to application_sharing_impl
 #application_sharing_type = "default" #changed type, saml, default #todo: check the new config for rest api
@@ -189,16 +189,16 @@ allow_credentials = false
 #traffic_manager_auth_urls = ["ssl://localhost:9711","ssl://localhost:9711"]
 #type = "failover"
 
-[apim.workflow]
-enable = false
-service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9445/bpmn"
-username = "$ref{super_admin.username}"
-password = "$ref{super_admin.password}"
-callback_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/api/am/admin/v0.17/workflows/update-workflow-status"
-token_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${https.nio.port}/token"
-client_registration_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/client-registration/v0.17/register"
-client_registration_username = "$ref{super_admin.username}"
-client_registration_password = "$ref{super_admin.password}"
+#[apim.workflow]
+#enable = false
+#service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9445/bpmn"
+#username = "$ref{super_admin.username}"
+#password = "$ref{super_admin.password}"
+#callback_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/api/am/admin/v0.17/workflows/update-workflow-status"
+#token_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${https.nio.port}/token"
+#client_registration_endpoint = "https://apim4sgad.westeurope.cloudapp.azure.com:${mgt.transport.https.port}/client-registration/v0.17/register"
+#client_registration_username = "$ref{super_admin.username}"
+#client_registration_password = "$ref{super_admin.password}"
 
 #data bridge config
 #[transport.receiver]
