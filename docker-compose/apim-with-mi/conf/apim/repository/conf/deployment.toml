@@ -102,7 +102,7 @@ auth_token = ""
 
 [apim.key_manager]
 # service_url = "https://is-as-km:${mgt.transport.https.port}/services/"
-service_url = "https://is-as-km:9444/services"
+service_url = "https://apim4sgad.westeurope.cloudapp.azure.com:9444/services/"
 type = "WSO2-IS"
 #username = "$ref{super_admin.username}"
 #password = "$ref{super_admin.password}"
