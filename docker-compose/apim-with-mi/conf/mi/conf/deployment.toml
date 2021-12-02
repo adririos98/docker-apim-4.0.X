@@ -1,5 +1,5 @@
 [server]
-hostname = "localhost"
+hostname = "apim4sgad.westeurope.cloudapp.azure.com"
 # offset  = 10
 
 [user_store]
@@ -101,7 +101,7 @@ algorithm = "AES"
 # secret_key = "[secret value]"
 
 [[service_catalog]]
-apim_host = "https://api-manager:9443"
+apim_host = "https://apim4sgad.westeurope.cloudapp.azure.com:9443"
 enable = true
 username = "admin"
 password = "admin"
