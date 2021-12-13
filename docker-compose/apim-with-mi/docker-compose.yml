@@ -79,6 +79,9 @@ services:
         condition: service_healthy
       api-manager:
         condition: service_healthy
+    environment:
+      MI_HOST: apim4sgad.westeurope.cloudapp.azure.com
+      MI_PORT: 8290
     volumes:
       - ./conf/mi:/home/wso2carbon/wso2-config-volume
     ports:
